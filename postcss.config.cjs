@@ -2,8 +2,6 @@ const isH5 = process.env.UNI_PLATFORM === 'h5'
 const isApp = process.env.UNI_PLATFORM === 'app'
 const WeappTailwindcssDisabled = isH5 || isApp
 
-console.log('WeappTailwindcssDisabled>>>',WeappTailwindcssDisabled);
-
 const plugins = [require('tailwindcss')(), require('autoprefixer')()]
 
 if (!WeappTailwindcssDisabled) {
