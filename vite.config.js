@@ -24,17 +24,11 @@ export default defineConfig({
       '@': '/src',
     },
   },
-  build: {
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
-  },
   server: {
     port: 8991,
     https: false,
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
   },
 })

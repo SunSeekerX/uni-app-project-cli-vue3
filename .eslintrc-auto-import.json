@@ -8,6 +8,7 @@
     "PropType": true,
     "Ref": true,
     "VNode": true,
+    "WritableComputedRef": true,
     "computed": true,
     "createApp": true,
     "customRef": true,
@@ -63,7 +64,6 @@
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,
-    "watchSyncEffect": true,
-    "WritableComputedRef": true
+    "watchSyncEffect": true
   }
 }
