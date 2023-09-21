@@ -26,7 +26,7 @@ export default function createRequest(options, packErr = true) {
 
   http.setResInterceptor(
     (res) => res.data,
-    (res) => res
+    (res) => res,
   )
 
   return async function request(config, failLog = true) {

@@ -112,6 +112,7 @@
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "pinst": "^3.0.0",
+    "postcss-html": "^1.5.0",
     "prettier": "^3.0.3",
     "sass": "^1.68.0",
     "stylelint": "^15.10.3",

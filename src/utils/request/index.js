@@ -9,5 +9,5 @@ export const req = createRequest(
       'content-type': 'application/x-www-form-urlencoded',
     },
   },
-  true
+  true,
 )
