@@ -1,7 +1,7 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/images/logo.png" />
-    <view>
+    <image class="logo w-[200rpx] h-[200rpx] mt-24" src="/static/images/logo.png" />
+    <view class="mt-[20px]">
       <text class="title">{{ mState.title }}</text>
     </view>
     <u-button type="primary" @tap="onTestRequest">测试请求</u-button>
@@ -39,9 +39,11 @@ export default {
 }
 
 .logo {
-  width: 200rpx;
-  height: 200rpx;
-  margin: 200rpx auto 50rpx;
+  /* width: 200rpx; */
+
+  /* height: 200rpx; */
+
+  /* margin: 200rpx auto 50rpx; */
 }
 
 .text-area {

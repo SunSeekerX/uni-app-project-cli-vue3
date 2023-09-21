@@ -4,6 +4,9 @@
     "pinst",
     "postpack",
     "rushstack",
-    "unplugin"
+    "tailwindcss",
+    "unplugin",
+    "uvtw",
+    "weapp"
   ]
 }

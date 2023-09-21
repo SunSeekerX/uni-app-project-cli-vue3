@@ -2,6 +2,7 @@ import { createSSRApp } from 'vue'
 import { createPinia } from 'pinia'
 import NP from 'number-precision'
 
+// import '@/styles/css/index.css'
 import App from './App.vue'
 import uView from '@/uni_modules/vk-uview-ui'
 import { i18n } from './i18n'
