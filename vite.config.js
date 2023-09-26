@@ -1,13 +1,14 @@
 import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
+import setupExtend from 'unplugin-vue-setup-extend-plus/vite'
+import { UnifiedViteWeappTailwindcssPlugin as uvtw } from 'weapp-tailwindcss/vite'
+
+import { plugins as postcssPlugins } from './postcss.config.cjs'
 
 const isH5 = process.env.UNI_PLATFORM === 'h5'
 const isApp = process.env.UNI_PLATFORM === 'app'
 const WeappTailwindcssDisabled = isH5 || isApp
-
-import { UnifiedViteWeappTailwindcssPlugin as uvtw } from 'weapp-tailwindcss/vite'
-import { plugins as postcssPlugins } from './postcss.config.cjs'
 
 export default defineConfig({
   plugins: [
@@ -28,6 +29,7 @@ export default defineConfig({
         globalsPropValue: true,
       },
     }),
+    setupExtend({}),
   ],
   resolve: {
     alias: {

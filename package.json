@@ -45,7 +45,8 @@
     "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint --fix \"src/**/*.{vue,less,postcss,css,scss}\" --allow-empty-input --cache --cache-location node_modules/.cache/stylelint/",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -125,6 +126,7 @@
     "stylelint-order": "^6.0.3",
     "tailwindcss": "^3.3.3",
     "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-setup-extend-plus": "^1.0.0",
     "vite": "^4.4.9",
     "weapp-tailwindcss": "^2.9.2"
   },
