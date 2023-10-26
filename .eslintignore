@@ -20,3 +20,4 @@ src/utils/libs/
 uni_modules
 auto-imports.d.ts
 shime-uni.d.ts
+shims-uni.d.ts
