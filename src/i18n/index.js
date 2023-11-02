@@ -1,5 +1,4 @@
 import { createI18n } from 'vue-i18n'
-import dayjs from 'dayjs'
 import zh_CN from './zh'
 import en_US from './en_US'
 
@@ -20,7 +19,6 @@ const i18n = createI18n({
 export { i18n }
 
 export function onInitI18n() {
-  dayjs.locale(getDayjsLocale())
   uni.setLocale(getUniAppLocale())
 }
 onInitI18n()

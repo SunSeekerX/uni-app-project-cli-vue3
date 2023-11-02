@@ -1,21 +1,23 @@
-<script>
-export default {
-  onLaunch: function () {
-    console.log('App Launch')
-  },
-  onShow: function () {
-    console.log('App Show')
-  },
-  onHide: function () {
-    console.log('App Hide')
-  },
-}
+<script setup>
+onLaunch(async () => {
+  console.log('onLaunch')
+})
+
+onHide(() => {
+  console.log('onHide')
+})
+
+onShow(() => {
+  console.log('onShow')
+})
 </script>
 
 <style lang="scss">
+/* #ifndef APP-NVUE */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+/* #endif */
 
 @import '@/uni_modules/limm-windi-css-uniapp/index.scss';
 @import '@/uni_modules/vk-uview-ui/index.scss';
