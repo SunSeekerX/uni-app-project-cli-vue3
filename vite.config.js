@@ -11,6 +11,9 @@ const isApp = process.env.UNI_PLATFORM === 'app'
 const WeappTailwindcssDisabled = isH5 || isApp
 
 export default defineConfig({
+  build: {
+    sourcemap: true,
+  },
   plugins: [
     uni(),
     uvtw({
