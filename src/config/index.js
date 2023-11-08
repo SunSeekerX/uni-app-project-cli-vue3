@@ -1,15 +1,10 @@
 import { defaultEnv } from './default'
-import dev from './dev.config'
-import prod from './prod.config'
+import dev from './env.dev'
+import prod from './env.prod'
 
 export const ENVS = {
   dev,
   prod,
-}
-
-export const ENV_KEYS = {
-  DEV: 'dev',
-  PROD: 'prod',
 }
 
 export const ENV = defaultEnv
