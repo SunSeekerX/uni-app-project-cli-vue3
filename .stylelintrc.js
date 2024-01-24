@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('stylelint').Config} */
+export default {
   root: true,
   plugins: ['stylelint-order'],
   customSyntax: 'postcss-html',
