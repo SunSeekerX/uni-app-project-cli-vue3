@@ -1,58 +1,31 @@
-<template>
-  <view class="content">
-    <image class="logo w-[200rpx] h-[200rpx] mt-24" src="/static/images/logo.png" />
-    <view class="mt-[20px]">
-      <text class="title">{{ mState.title }}</text>
-    </view>
-    <u-button type="primary" @tap="onTestRequest">测试请求</u-button>
-  </view>
-</template>
-
 <script setup>
-import combo from '@/utils/combo'
+import * as god from '@/god'
 
 const mState = reactive({
-  title: '',
+  title: 'Hello',
+  res: {},
 })
 
 const onTestRequest = async () => {
-  const getRes = await combo.api.getApi()
-  console.log('getRes>>>', getRes)
-  if (!getRes.success) {
-    combo.utools.toast(getRes.msg)
+  const res = await god.api.getApi()
+  console.log('res>>>', res)
+  if (res.success) {
+    mState.res = res
+  } else {
+    god.uniapp.toast(res.msg)
   }
 }
 </script>
 
-<script>
-export default {
-  name: 'PageHome',
-}
-</script>
-
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  /* width: 200rpx; */
-
-  /* height: 200rpx; */
-
-  /* margin: 200rpx auto 50rpx; */
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>
+<template>
+  <view class="flex flex-col justify-center items-center p-[20px]">
+    <image class="w-[200rpx] h-[200rpx] mt-24" src="/static/images/logo.png" />
+    <view class="mt-[20px]">
+      <text class="text-[36rpx] text-[#8f8f94]">{{ mState.title }}</text>
+    </view>
+    <u-button type="primary" @tap="onTestRequest">测试请求</u-button>
+    <view class="mt-[20px]">
+      <text class="text-[36rpx] text-[#8f8f94]">{{ mState.res }}</text>
+    </view>
+  </view>
+</template>
