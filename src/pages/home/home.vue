@@ -23,7 +23,7 @@ const onTestRequest = async () => {
     <view class="mt-[20px]">
       <text class="text-[36rpx] text-[#8f8f94]">{{ mState.title }}</text>
     </view>
-    <u-button type="primary" @tap="onTestRequest">测试请求</u-button>
+    <u-button type="primary" @click="onTestRequest">测试请求</u-button>
     <view class="mt-[20px]">
       <text class="text-[36rpx] text-[#8f8f94]">{{ mState.res }}</text>
     </view>

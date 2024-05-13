@@ -63,7 +63,7 @@ export const getEnv = (key) => {
 }
 
 // I18n
-export function getI18nLocale(locale) {
+export const getI18nLocale = (locale) => {
   switch (locale) {
     case defaultConfig.locales.EN_US.value:
       return 'en_US'
@@ -86,8 +86,7 @@ export const i18n = createI18n({
 })
 
 export const t = i18n.global.t
-
-export function getDayjsLocale() {
+export const getDayjsLocale = () => {
   const curLocale = i18n.global.locale
   switch (curLocale) {
     case defaultConfig.locales.EN_US.value:
@@ -99,7 +98,7 @@ export function getDayjsLocale() {
   }
 }
 
-export function getUniAppLocale() {
+export const getUniAppLocale = () => {
   // https://uniapp.dcloud.net.cn/api/ui/locale.html
   const curLocale = i18n.global.locale
   switch (curLocale) {
