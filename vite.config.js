@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
+import path from 'path'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
 import setupExtend from 'unplugin-vue-setup-extend-plus/vite'
 import { UnifiedViteWeappTailwindcssPlugin as uvtw } from 'weapp-tailwindcss/vite'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 import { plugins as postcssPlugins } from './postcss.config.cjs'
 
@@ -33,6 +35,23 @@ export default defineConfig({
       },
     }),
     setupExtend({}),
+    createSvgIconsPlugin({
+      iconDirs: [path.resolve(process.cwd(), 'src/components/svg_icon/svg_transparent')],
+      symbolId: 'icon-[dir]-[name]',
+      customDomId: '__svg__icons__dom__',
+      svgoOptions: {
+        full: true,
+        plugins: [
+          {
+            name: 'removeAttrs',
+            params: {
+              // (fill|stroke)
+              attrs: ['fill'],
+            },
+          },
+        ],
+      },
+    }),
   ],
   resolve: {
     alias: {
